@@ -77,12 +77,12 @@ public class Account {
             return ;
         }
         if (!checkBalance(amount)) {
-            System.out.println("Thanh toán không thành công");
+            System.out.println("Chuyển khoản không thành công");
             return ;
         }
         this.debit(amount);
         b.credit(amount);
-        System.out.println("Thanh toán thành công");
+        System.out.println("Chuyển khoản thành công");
     }
 
     @Override
