@@ -10,7 +10,7 @@ public class Main {
         Vietnamese vn2 = new Vietnamese("VN2","Nguyên văn B",new Date(System.currentTimeMillis()),93,"Sinh hoat");
         Vietnamese vn3 = new Vietnamese("VN3","Nguyên văn C",new Date(System.currentTimeMillis()),113,"Sinh hoat");
         Vietnamese vn4 = new Vietnamese("VN4","Nguyên văn D",new Date(System.currentTimeMillis()),223,"Sinh hoat");
-        Foreigner f1 = new Foreigner("Foreigner1","Thomas Editor",new Date(System.currentTimeMillis()),124,"England");
+        Foreigner f1 = new Foreigner("Foreigner1","Thomas Editor",new Date(System.currentTimeMillis()),223,"England");
         List<Customer> list = new ArrayList<>();
         list.add(vn1);
         list.add(vn2);
@@ -20,7 +20,7 @@ public class Main {
         System.out.println("-----");
         for (Customer cus: list
              ) {
-            System.out.println("Name: "+cus.getName()+",Total: "+ cus.total());
+            System.out.println("Name: "+cus.getName()+",Electric number: "+ cus.getElectricNumber()+",Total: "+ cus.total());
         }
     }
 }
