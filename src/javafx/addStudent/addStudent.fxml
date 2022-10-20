@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+
+<Pane fx:controller="javafx.addStudent.StudentController" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <TextField fx:id="txtName" layoutX="76.0" layoutY="85.0" promptText="Name" />
+      <TextField fx:id="txtEmail" layoutX="76.0" layoutY="119.0" promptText="Email" />
+      <TextField fx:id="txtAddress" layoutX="76.0" layoutY="154.0" promptText="Address" />
+      <TextField fx:id="txtAge" layoutX="76.0" layoutY="188.0" promptText="Age" />
+      <TextField fx:id="txtPhone" layoutX="76.0" layoutY="225.0" promptText="Phone number" />
+      <Text fx:id="textName" layoutX="342.0" layoutY="102.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+      <Text fx:id="textEmail" layoutX="342.0" layoutY="136.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+      <Text fx:id="textAddress" layoutX="342.0" layoutY="171.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+      <Text fx:id="textAge" layoutX="342.0" layoutY="205.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+      <Text fx:id="textPhone" layoutX="342.0" layoutY="242.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+      <Button onAction="#submit" layoutX="124.0" layoutY="283.0" mnemonicParsing="false" text="Submit" />
+   </children>
+</Pane>
