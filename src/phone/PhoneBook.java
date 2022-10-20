@@ -5,7 +5,7 @@ import java.util.Collections;
 import java.util.List;
 import java.util.stream.Collectors;
 
-public class PhoneBook extends Phone {
+public class PhoneBook implements Phone {
     List<PhoneNumber> phones;
 
     public PhoneBook() {
@@ -19,6 +19,12 @@ public class PhoneBook extends Phone {
         }
         PhoneNumber phoneNumber = getPhone(name);
         if (phoneNumber != null) {
+            for (String number :phoneNumber.getPhones()
+                 ) {
+                if (number.equals(phone)){
+                    return;
+                }
+            }
             phoneNumber.getPhones().add(phone);
         } else {
             PhoneNumber newP = new PhoneNumber();

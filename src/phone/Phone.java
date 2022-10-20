@@ -1,6 +1,6 @@
 package phone;
 
-public abstract class Phone {
+public interface Phone {
 
     public abstract void insertPhone(String name, String phone);
 
