@@ -27,9 +27,14 @@ public class StudentController {
     }
 
     private void save(Student student) {
-        for (int i = 0; i <students.size() ; i++) {
-            if (students.get(i).getName().equals(student.getName())){
-                students.set(i,student);
+        for (Student st: students
+             ) {
+            if (st.getName().equals(student.getName())){
+                st.setAddress(student.getAddress());
+                st.setPhone(student.getPhone());
+                st.setEmail(student.getEmail());
+                st.setAge(student.getAge());
+                lv.refresh();
                 return;
             }
         }
