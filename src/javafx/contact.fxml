@@ -5,17 +5,16 @@
 <?import javafx.scene.text.*?>
 <?import javafx.scene.layout.*?>
 
-<Pane fx:controller="javafx.ContactController" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javafx.ContactController">
    <children>
        <Text layoutX="49.0" layoutY="63.0" text="Yokino Yuikinoshita">
          <font>
             <Font size="18.0" />
          </font>
       </Text>
-       <TextField layoutX="52.0" fx:id="txtName" layoutY="109.0" promptText="ichi" />
-       <TextField layoutX="52.0" fx:id="txtEmail" layoutY="158.0" promptText="ni" />
-      <Button onAction="#submit" layoutX="100.0" layoutY="210.0" mnemonicParsing="false" text="Submit" />
-      <Text layoutX="385.0" fx:id="textName" layoutY="126.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ichi" />
-      <Text layoutX="383.0" fx:id="textEmail" layoutY="175.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ni" />
+       <TextField fx:id="txtName" layoutX="52.0" layoutY="109.0" promptText="name" />
+       <TextField fx:id="txtEmail" layoutX="52.0" layoutY="158.0" promptText="email" />
+      <Button layoutX="100.0" layoutY="210.0" mnemonicParsing="false" onAction="#submit" text="Submit" />
+      <ListView fx:id="lv" layoutX="278.0" layoutY="83.0" prefHeight="231.0" prefWidth="287.0" />
    </children>
 </Pane>
