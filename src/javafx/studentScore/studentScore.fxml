@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="523.0" prefWidth="812.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javafx.studentScore.StudentController">
+   <children>
+      <TextField fx:id="txtName" layoutX="76.0" layoutY="85.0" promptText="Name" />
+      <TextField fx:id="txtEmail" layoutX="76.0" layoutY="122.0" promptText="Email" />
+      <TextField fx:id="txtScore" layoutX="76.0" layoutY="158.0" promptText="Score" />
+      <Button layoutX="123.0" layoutY="200.0" mnemonicParsing="false" onAction="#submit" text="Submit" />
+      <Text layoutX="360.0" layoutY="49.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Danh sách">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Text>
+      <ListView fx:id="lv" layoutX="269.0" layoutY="79.0" prefHeight="294.0" prefWidth="446.0" />
+      <Button onAction="#sortByName" layoutX="50.0" layoutY="262.0" mnemonicParsing="false" text="Sort by name" />
+      <Button onAction="#sortByScore" layoutX="159.0" layoutY="262.0" mnemonicParsing="false" text="Sort by score" />
+      <Button onAction="#addData" layoutX="118.0" layoutY="341.0" mnemonicParsing="false" text="add Data" />
+   </children>
+</Pane>
