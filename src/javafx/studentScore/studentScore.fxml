@@ -19,6 +19,5 @@
       <ListView fx:id="lv" layoutX="269.0" layoutY="79.0" prefHeight="294.0" prefWidth="446.0" />
       <Button onAction="#sortByName" layoutX="50.0" layoutY="262.0" mnemonicParsing="false" text="Sort by name" />
       <Button onAction="#sortByScore" layoutX="159.0" layoutY="262.0" mnemonicParsing="false" text="Sort by score" />
-      <Button onAction="#addData" layoutX="118.0" layoutY="341.0" mnemonicParsing="false" text="add Data" />
    </children>
 </Pane>

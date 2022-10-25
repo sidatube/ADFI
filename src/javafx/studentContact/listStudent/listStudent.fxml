@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+
+<Pane fx:controller="javafx.studentContact.listStudent.ListController" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="543.0" prefWidth="820.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <ListView fx:id="lv" layoutX="172.0" layoutY="130.0" prefHeight="284.0" prefWidth="477.0" />
+      <Button onAction="#sortByName" layoutX="205.0" layoutY="79.0" mnemonicParsing="false" text="Sort by name" />
+      <Button onAction="#sortByScore" layoutX="494.0" layoutY="79.0" mnemonicParsing="false" text="Sort by score" />
+      <Button onAction="#goAdd" layoutX="768.0" layoutY="14.0" mnemonicParsing="false" text="Add" />
+   </children>
+</Pane>

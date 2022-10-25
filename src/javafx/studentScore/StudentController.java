@@ -3,12 +3,15 @@ package javafx.studentScore;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
+import javafx.fxml.Initializable;
+import javafx.scene.control.Alert;
 import javafx.scene.control.ListView;
 import javafx.scene.control.TextField;
 
-import java.util.Collections;
+import java.net.URL;
+import java.util.ResourceBundle;
 
-public class StudentController {
+public class StudentController implements Initializable {
     public TextField txtName,txtEmail, txtScore;
     public ListView<StudentScore> lv;
     private ObservableList<StudentScore> students = FXCollections.observableArrayList();
@@ -19,8 +22,14 @@ public class StudentController {
         double studentScore =0;
         try {
             studentScore =Double.parseDouble(txtScore.getText());
-        }catch (Exception ignored){
-
+            if (studentScore<0||studentScore>10)
+                throw new  Exception("Điểm nằm trong khoảng từ 0 đến 10");
+        }catch (Exception e){
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("Error!");
+            alert.setHeaderText(e.getMessage());
+            alert.show();
+            return;
         }
         save(new StudentScore(txtName.getText(),txtEmail.getText(),studentScore));
         txtName.setText("");
@@ -62,8 +71,10 @@ public class StudentController {
 
     }
 
-    public void addData(ActionEvent actionEvent) {
-        students.clear();
+
+
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {
         students.add(new StudentScore("Babruh","3brul@gmail.com",9.9));
         students.add(new StudentScore("Aqua","konosu3@gmail.com",0.9));
         students.add(new StudentScore("Darkness","Lightning@gmail.com",7.9));
