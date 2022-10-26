@@ -1,5 +1,7 @@
 package javafx.studentScore;
 
+import java.util.Objects;
+
 public class StudentScore {
     private String name;
     private String email;
@@ -45,5 +47,18 @@ public class StudentScore {
                         ", " + email +
                         ", score: " + score
                 ;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        StudentScore that = (StudentScore) o;
+        return Double.compare(that.score, score) == 0 && Objects.equals(name, that.name) && Objects.equals(email, that.email);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(name, email, score);
     }
 }

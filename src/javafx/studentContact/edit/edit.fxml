@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane fx:controller="javafx.studentContact.edit.EditController" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="543.0" prefWidth="820.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Button onAction="#goList" layoutX="768.0" layoutY="14.0" mnemonicParsing="false" text="List" />
+      <Text layoutX="138.0" layoutY="133.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name" />
+      <Text layoutX="140.0" layoutY="201.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Email" />
+      <Text layoutX="143.0" layoutY="268.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Score" />
+      <TextField fx:id="txtName" layoutX="138.0" layoutY="146.0" promptText="Name" />
+      <TextField fx:id="txtEmail" layoutX="138.0" layoutY="217.0" promptText="Email" />
+      <TextField fx:id="txtScore" layoutX="143.0" layoutY="285.0" promptText="score" />
+      <Button onAction="#submit" layoutX="143.0" layoutY="341.0" mnemonicParsing="false" text="Submit" />
+   </children>
+</Pane>

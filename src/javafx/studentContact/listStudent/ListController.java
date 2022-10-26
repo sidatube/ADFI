@@ -1,5 +1,7 @@
 package javafx.studentContact.listStudent;
 
+import javafx.beans.value.ChangeListener;
+import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -9,6 +11,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.ListView;
 import javafx.studentContact.Main;
+import javafx.studentContact.edit.EditController;
 import javafx.studentScore.StudentScore;
 
 import java.io.IOException;
@@ -40,6 +43,17 @@ public class ListController implements Initializable {
         lv.refresh();
 
     }
+    public void goEdit(){
+        Parent root = null;
+        try {
+            root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("../edit/edit.fxml")));
+        } catch (IOException e) {
+            e.printStackTrace();
+            return;
+        }
+        Main.mainStage.setTitle("Edit");
+        Main.mainStage.setScene(new Scene(root, 820,600));
+    }
 
 
 
@@ -54,6 +68,10 @@ public class ListController implements Initializable {
           students.add(new StudentScore("Simp","3brul@gmail.com",9.9));
       }
         lv.setItems(students);
+      lv.setOnMouseClicked(event -> {
+          EditController.editing=lv.getSelectionModel().getSelectedItems().get(0);
+          goEdit();
+      });
     }
 
     public void goAdd(ActionEvent actionEvent) throws IOException {
@@ -61,9 +79,6 @@ public class ListController implements Initializable {
         Main.mainStage.setTitle("Add ");
         Main.mainStage.setScene(new Scene(root, 820,600));
     }
-    public void goEdit(ActionEvent actionEvent) throws IOException {
-        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("../addStudent/add.fxml")));
-        Main.mainStage.setTitle("Add ");
-        Main.mainStage.setScene(new Scene(root, 820,600));
-    }
+
+
 }
