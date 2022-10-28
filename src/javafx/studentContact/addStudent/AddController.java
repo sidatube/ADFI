@@ -27,7 +27,7 @@ public class AddController {
     }
 
     private void onGoList() throws IOException {
-        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("../listStudent/listStudent.fxml")));
+        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("../listStudent/list.fxml")));
         Main.mainStage.setTitle("List");
         Main.mainStage.setScene(new Scene(root, 820,600));
     }

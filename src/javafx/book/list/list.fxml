@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.layout.Pane?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="543.0" prefWidth="820.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javafx.book.list.ListController">
+   <children>
+      <ListView fx:id="lv" layoutX="172.0" layoutY="130.0" prefHeight="284.0" prefWidth="477.0" />
+      <Button layoutX="205.0" layoutY="79.0" mnemonicParsing="false" onAction="#sortByName" text="Sort by name" />
+      <Button layoutX="494.0" layoutY="79.0" mnemonicParsing="false" onAction="#sortByPrice" text="Sort by Price" />
+      <Button layoutX="768.0" layoutY="14.0" mnemonicParsing="false" onAction="#goAdd" text="Add" />
+      <Button layoutX="350.0" layoutY="79.0" mnemonicParsing="false" onAction="#sortByQty" text="Sort by Qty" />
+   </children>
+</Pane>

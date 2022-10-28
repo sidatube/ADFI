@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Text?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="543.0" prefWidth="820.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javafx.book.edit.EditController">
+   <children>
+      <Button layoutX="768.0" layoutY="14.0" mnemonicParsing="false" onAction="#goList" text="List" />
+      <Text layoutX="137.0" layoutY="52.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name" />
+      <Text layoutX="135.0" layoutY="114.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Author" />
+      <Text layoutX="132.0" layoutY="178.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nxb" />
+      <TextField fx:id="txtName" layoutX="136.0" layoutY="68.0" promptText="Name" />
+      <TextField fx:id="txtAuthor" layoutX="136.0" layoutY="127.0" promptText="Author" />
+      <TextField fx:id="txtPrice" layoutX="136.0" layoutY="305.0" promptText="Price" />
+      <ChoiceBox fx:id="choiceNxb" layoutX="135.0" layoutY="189.0" prefWidth="150.0" />
+      <Text layoutX="130.0" layoutY="235.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Type" />
+      <ChoiceBox fx:id="choiceType" layoutX="135.0" layoutY="247.0" prefWidth="150.0" />
+      <Text layoutX="130.0" layoutY="293.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Price" />
+      <Text layoutX="130.0" layoutY="352.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Qty" />
+      <TextField fx:id="txtQty" layoutX="136.0" layoutY="362.0" promptText="Qty" />
+      <Button layoutX="143.0" layoutY="420.0" mnemonicParsing="false" onAction="#submit" text="Submit" />
+      <Button layoutX="276.0" layoutY="420.0" mnemonicParsing="false" onAction="#delete" text="Delete" />
+   </children>
+</Pane>
