@@ -5,12 +5,10 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
-import javafx.scene.control.ListView;
 import javafx.scene.control.TextField;
 import javafx.studentContact.Main;
-import javafx.studentContact.Student;
 import javafx.studentContact.listStudent.ListController;
-import javafx.studentScore.StudentScore;
+import javafx.studentContact.StudentScore;
 
 import java.io.IOException;
 import java.util.Objects;
@@ -27,7 +25,7 @@ public class AddController {
     }
 
     private void onGoList() throws IOException {
-        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("../listStudent/list.fxml")));
+        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("../listStudent/listStudent.fxml")));
         Main.mainStage.setTitle("List");
         Main.mainStage.setScene(new Scene(root, 820,600));
     }

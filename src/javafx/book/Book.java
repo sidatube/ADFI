@@ -1,5 +1,12 @@
 package javafx.book;
 
+import javafx.book.edit.EditController;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.scene.control.Button;
+
+import java.io.IOException;
 import java.math.BigDecimal;
 import java.util.Objects;
 
@@ -11,6 +18,15 @@ public class Book {
     private String type;
     private BigDecimal price;
     private int qty;
+    private Button edit;
+
+    public Button getEdit() {
+        return edit;
+    }
+
+    public void setEdit(Button edit) {
+        this.edit = edit;
+    }
 
     @Override
     public boolean equals(Object o) {
@@ -36,6 +52,19 @@ public class Book {
         this.type = type;
         this.price = price;
         this.qty = qty;
+        this.edit = new Button("Edit");
+        edit.setOnAction(event -> {
+            EditController.editing = this;
+            Parent root = null;
+            try {
+                root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("edit/edit.fxml")));
+            } catch (IOException e) {
+                e.printStackTrace();
+                return;
+            }
+            Main.mainStage.setTitle("Edit");
+            Main.mainStage.setScene(new Scene(root, 820,600));
+        });
     }
 
     public String getId() {

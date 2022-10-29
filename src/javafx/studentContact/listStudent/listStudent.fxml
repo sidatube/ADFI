@@ -1,15 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.*?>
-<?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-
-<Pane fx:controller="javafx.studentContact.listStudent.ListController" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="543.0" prefWidth="820.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="543.0" prefWidth="820.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javafx.studentContact.listStudent.ListController">
    <children>
-      <ListView fx:id="lv" layoutX="172.0" layoutY="130.0" prefHeight="284.0" prefWidth="477.0" />
-      <Button onAction="#sortByName" layoutX="205.0" layoutY="79.0" mnemonicParsing="false" text="Sort by name" />
-      <Button onAction="#sortByScore" layoutX="494.0" layoutY="79.0" mnemonicParsing="false" text="Sort by score" />
-      <Button onAction="#goAdd" layoutX="768.0" layoutY="14.0" mnemonicParsing="false" text="Add" />
+      <Button layoutX="205.0" layoutY="79.0" mnemonicParsing="false" onAction="#sortByName" text="Sort by name" />
+      <Button layoutX="494.0" layoutY="79.0" mnemonicParsing="false" onAction="#sortByScore" text="Sort by score" />
+      <Button layoutX="768.0" layoutY="14.0" mnemonicParsing="false" onAction="#goAdd" text="Add" />
+      <TableView  fx:id="table" layoutX="177.0" layoutY="142.0" prefHeight="340.0" prefWidth="459.0">
+        <columns>
+          <TableColumn fx:id="cName" prefWidth="82.0" text="Name" />
+          <TableColumn fx:id="cEmail" prefWidth="223.0" text="Email" />
+            <TableColumn fx:id="cScore"  prefWidth="71.0" text="Score" />
+            <TableColumn prefWidth="82.0" fx:id="cAction" text="Action" />
+        </columns>
+      </TableView>
    </children>
 </Pane>

@@ -9,10 +9,20 @@
 
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="543.0" prefWidth="820.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javafx.book.list.ListController">
    <children>
-      <ListView fx:id="lv" layoutX="172.0" layoutY="130.0" prefHeight="284.0" prefWidth="477.0" />
       <Button layoutX="205.0" layoutY="79.0" mnemonicParsing="false" onAction="#sortByName" text="Sort by name" />
       <Button layoutX="494.0" layoutY="79.0" mnemonicParsing="false" onAction="#sortByPrice" text="Sort by Price" />
       <Button layoutX="768.0" layoutY="14.0" mnemonicParsing="false" onAction="#goAdd" text="Add" />
       <Button layoutX="350.0" layoutY="79.0" mnemonicParsing="false" onAction="#sortByQty" text="Sort by Qty" />
+      <TableView fx:id="lv" layoutX="108.0" layoutY="124.0" prefHeight="405.0" prefWidth="562.0">
+        <columns>
+          <TableColumn fx:id="cName" prefWidth="100.0" text="Name" />
+          <TableColumn fx:id="cAuthor" prefWidth="79.0" text="Author" />
+            <TableColumn fx:id="cNxb" prefWidth="87.0" text="Nxb" />
+            <TableColumn fx:id="cType" prefWidth="82.0" text="Type" />
+            <TableColumn fx:id="cPrice" prefWidth="74.0" text="Price" />
+            <TableColumn fx:id="cQty" prefWidth="68.0" text="Qty" />
+            <TableColumn fx:id="cAction" minWidth="4.0" prefWidth="71.0" text="Action" />
+        </columns>
+      </TableView>
    </children>
 </Pane>

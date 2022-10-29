@@ -11,6 +11,9 @@ import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.ListView;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
+import javafx.scene.control.cell.PropertyValueFactory;
 
 import java.io.IOException;
 import java.math.BigDecimal;
@@ -20,8 +23,15 @@ import java.util.ResourceBundle;
 import java.util.UUID;
 
 public class ListController implements Initializable {
-    public ListView<Book> lv;
     public static final ObservableList<Book> books = FXCollections.observableArrayList();
+    public TableView<Book> lv;
+    public TableColumn<Book,String > cName;
+    public TableColumn<Book,String> cAuthor;
+    public TableColumn<Book,String > cNxb;
+    public TableColumn<Book,String > cType;
+    public TableColumn<Book,BigDecimal > cPrice;
+    public TableColumn<Book,Integer > cQty;
+    public TableColumn<Book,String > cAction;
     private boolean sortName = false;
     private boolean sortPrice = false;
     private boolean sortQty = false;
@@ -77,11 +87,18 @@ public class ListController implements Initializable {
           books.add(new Book(UUID.randomUUID().toString(),"Book 3","Author 3","nxb kim dong","thiếu nhi",new BigDecimal(43000),4));
           books.add(new Book(UUID.randomUUID().toString(),"Book 4","Author 4","nxb kim dong","thiếu nhi",new BigDecimal(70000),12));
       }
+      cName.setCellValueFactory(new PropertyValueFactory<>("name"));
+      cAuthor.setCellValueFactory(new PropertyValueFactory<>("author"));
+      cNxb.setCellValueFactory(new PropertyValueFactory<>("nxb"));
+      cType.setCellValueFactory(new PropertyValueFactory<>("type"));
+      cPrice.setCellValueFactory(new PropertyValueFactory<>("price"));
+      cQty.setCellValueFactory(new PropertyValueFactory<>("qty"));
+      cAction.setCellValueFactory(new PropertyValueFactory<>("edit"));
         lv.setItems(books);
-      lv.setOnMouseClicked(event -> {
-          EditController.editing=lv.getSelectionModel().getSelectedItems().get(0);
-          goEdit();
-      });
+//      lv.setOnMouseClicked(event -> {
+//          EditController.editing=lv.getSelectionModel().getSelectedItems().get(0);
+//          goEdit();
+//      });
     }
 
     public void goAdd(ActionEvent actionEvent) throws IOException {
