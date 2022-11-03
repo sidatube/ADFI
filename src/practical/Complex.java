@@ -56,9 +56,9 @@ public class Complex {
 
     @Override
     public String toString() {
-        return
-                realPart +
-                        "+" + imaginaryPart +
-                        'i';
+        return realPart +
+                (imaginaryPart>0?"+":"-") + Math.abs(imaginaryPart) +
+                'i'
+                ;
     }
 }
