@@ -41,7 +41,7 @@ public class Complex {
     public Complex multiply(Complex otherComplex) {
         Complex newCp = new Complex();
         newCp.setRealPart(realPart * otherComplex.getRealPart() - imaginaryPart * otherComplex.getImaginaryPart());
-        newCp.setImaginaryPart(realPart * otherComplex.getRealPart() + imaginaryPart * otherComplex.getImaginaryPart());
+        newCp.setImaginaryPart(realPart * otherComplex.getImaginaryPart() + imaginaryPart * otherComplex.getRealPart());
         return newCp;
     }
 
